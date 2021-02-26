@@ -11,7 +11,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	int FullNum;
-	cout << "Ââåäèòå òð¸õçíà÷íîå ÷èñëî: ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã²Ã°Â¸ÃµÃ§Ã­Ã Ã·Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã®: ";
 	cin >> FullNum;
 	int FirstNum = FullNum / 100;
 	int SecondNum= FullNum % 100;
