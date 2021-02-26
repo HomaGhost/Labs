@@ -1,4 +1,4 @@
-// ConsoleApplication4.cpp: определяет точку входа для консольного приложения.
+// ConsoleApplication4.cpp: Г®ГЇГ°ГҐГ¤ГҐГ«ГїГҐГІ ГІГ®Г·ГЄГі ГўГµГ®Г¤Г  Г¤Г«Гї ГЄГ®Г­Г±Г®Г«ГјГ­Г®ГЈГ® ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї.
 //
 
 #include "stdafx.h"
@@ -15,7 +15,7 @@ int main()
 	int FlowSpeedRev = A - B;
 	Time = rangeS / (A + B);
 	rangeRev = (A - B)*Time;
-	cout << "Расстояние, пройденное против течения " << rangeRev<< endl;
+	cout << "ГђГ Г±Г±ГІГ®ГїГ­ГЁГҐ, ГЇГ°Г®Г©Г¤ГҐГ­Г­Г®ГҐ ГЇГ°Г®ГІГЁГў ГІГҐГ·ГҐГ­ГЁГї " << rangeRev<< endl;
 	system("pause");
 	return 0;
 }
