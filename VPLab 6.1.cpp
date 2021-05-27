@@ -1,46 +1,38 @@
 ﻿#include <iostream>
 #include <windows.h>
+#include <ctime>
+#include <string>
 using namespace std;
 
-int main()
-{
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-    int N;
-    cout << "Вветите размерность массива"<<endl;
-    cin >> N;
-    int *mas= new int [N];
-    //задание массива
-    for (int i=0; i<=N; ++i) 
-    {
-        cout << "arr[" <<i<<"]= ";
-        cin >> mas[i];
-    }
-    int sum = 0;
-    //подсчёт суммы
-    for (int i = 0; i <= N; ++i)
-    {
-        sum += mas[i];
-    }
-    cout << "Сумма всех элементов= " << sum << endl;
-    sum = 0;
-    //сумма квадратов
-    for (int i = 0; i <= N; ++i)
-    {
-      sum+= mas[i]*mas[i];
- 
-    }
-    cout << "Сумма квадратов= " << sum << endl;
-    //сумма элементов от k1 до k2
-    sum = 0;
-    int k1, k2;
-    cout << "Введите номера первого и последнего элемента в массиве: "<<endl;
-    cin >> k1 >> k2;
-    for ( int i=k1; i<= k2; ++i)
-    {
-            sum += mas[i];
-    }
-    cout << "Сумма с k1 по k2 элемент= " << sum << endl;
 
-  
+int main() {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int* arr, size, sum = 0, sumkv = 0, sumopr = 0, ot, ido;
+	cout << "Введите размер: ";
+	cin >> size;
+	arr = new int[size];
+	cout << "Введите числа: " << endl;
+	for (int i = 0; i < size; i++) {
+		cin >> arr[i];
+	}
+	cout << "Наш массив: \n";
+	for (int i = 0; i < size; i++) {
+		cout << arr[i] << " ";
+	}
+	for (int i = 0; i < size; i++) {
+		sum += arr[i];
+	}
+	for (int i = 0; i < size; i++) {
+		sumkv += pow(arr[i], 2);
+	}
+	cout << "\nВведите с какого и по какой элемент находить сумму (k1 и k2):\n";
+	cin >> ot >> ido;
+	for (int i = ot - 1; i < ido; i++) {
+		sumopr += arr[i];
+	}
+	cout << "Сумма всех элементов массива равна " << sum << endl;
+	cout << "Сумма квадратов всех элементов массива равна " << sumkv << endl;
+	cout << "Сумма от k1 до k2 элементов массива равна " << sumopr << endl;;
+	delete[] arr;
 }
