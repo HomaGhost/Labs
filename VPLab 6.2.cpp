@@ -1,62 +1,52 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include <windows.h>
+#include <ctime>
+#include <string>
 using namespace std;
 
-int main()
-{
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-    int N;
-    cout << "Вветите размерность массива" << endl;
-    cin >> N;
-    int* mas = new int[N];
-    //задание массива
-    for (int i = 0; i < N; ++i)
-    {
-        cout << "arr[" << i << "]= ";
-        cin >> mas[i];
-    }
 
-    for (int i = 0; i < N - 1; i++) {
-        for (int j = 0; j < N - i - 1; j++) {
-            if (mas[j] < mas[j + 1]) {
-                // меняем элементы местами
-                swap(mas[j], mas[j + 1]);
-            }
-        }
-    }
-
-    for (int i = 0; i < N; ++i)
-    {
-        cout << mas[i]<<" ";
-    }
-    '\n';
-    int a, counter=0;
-    cout << "Введите заданное число a: " << endl;
-    cin >> a;
-    cout << "Числа меньшие a: ";
-    for (int i = 0; i < N; ++i)
-    {
-        if(mas[i]<a)
-        {
-            cout << mas[i] << " ";
-            ++counter;
-        }
-    }
-    if (counter == 0)
-        cout << "Нет чисел меньших, чем a"<<endl;
-    counter = 0;
-    cout << "Числа большие a: ";
-    for (int i = 0; i < N; ++i)
-    {
-
-        if (mas[i] > a)
-        {
-            cout << mas[i] << " ";
-            ++counter;
-        }
-    }
-    if (counter == 0)
-        cout << "Нет чисел больших, чем a" << endl;
+int main() {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int* arr, size, buf = 0, a, index = -1;
+	cout << "Введите размер: ";
+	cin >> size;
+	arr = new int[size];
+	cout << "Введите числа: " << endl;
+	for (int i = 0; i < size; i++) {
+		cin >> arr[i];
+	}
+	cout << "Наш массив: \n";
+	for (int i = 0; i < size; i++) {
+		cout << arr[i] << " ";
+	}
+	cout << "\n";
+	for (int i = 0; i < size - 1; i++) {
+		for (int k = 0; k < size - 1; k++)
+			if (arr[k] < arr[k + 1])
+			{
+				buf = arr[k];
+				arr[k] = arr[k + 1];
+				arr[k + 1] = buf;
+			}
+	}
+	cout << "Упорядоченный массив: " << endl;
+	for (int i = 0; i < size; i++) {
+		cout << arr[i] << " ";
+	}
+	cout << "Введите число а: ";
+	cin >> a;
+	for (int i = 0; i < size; i++) {
+		if (arr[i] < a) {
+			index = i; break;
+		}
+	}
+	if (index == -1) {
+		cout << "Нет чисел меньше а!";
+		exit(1);
+	}
+	for (int i = index; i < size; i++) {
+		if (arr[i] < a) cout << arr[i] << " ";
+	}
+	return 0;
 }
