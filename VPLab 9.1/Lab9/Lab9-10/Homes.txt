@@ -1,0 +1,18 @@
+Chkalova
+Block_of_Flats 6 1 104 5
+Terraced 6 2 5 40
+Terraced 6 3 6 48
+Terraced 7 1 12 96
+Block_of_Flats 7 2 94 5
+Skyscraper 8 1 150 3
+Skyscraper 8 2 210 5
+Terraced 8 3 10 80
+Block_of_Flats 9 4 84 4
+Terraced 9 5 9 72
+Cottage 9 6 1 8
+Cottage 9 7 1 10
+Block_of_Flats 10 10 107 6
+Skyscraper 11 11 260 8
+Skyscraper 11 12 240 4
+Block_of_Flats 11 13 102 5
+Skyscraper 11 14 160 3
