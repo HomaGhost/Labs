@@ -1,0 +1,18 @@
+BigHouse
+Mediumflat 6 1 104 5
+Bigflat 6 2 5 40
+Bigflat 6 3 6 48
+Bigflat 7 1 12 96
+Mediumflat 7 2 94 5
+Verybigflat 8 1 150 3
+Verybigflat 8 2 210 5
+Bigflat 8 3 10 80
+Mediumflat 9 4 84 4
+Bigflat 9 5 9 72
+Littleflat 9 6 1 8
+Littleflat 9 7 1 10
+Mediumflat 10 10 107 6
+Verybigflat 11 11 260 8
+Verybigflat 11 12 240 4
+Mediumflat 11 13 102 5
+Verybigflat 1 2 160 3
